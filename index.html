@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Student Performance Predictor</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-brand">
+            <i class="fas fa-brain"></i>
+            <span>EduPredict AI</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#predict">Predict</a></li>
+            <li><a href="#dashboard">Dashboard</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+        <div class="hamburger">
+            <span></span><span></span><span></span>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <i class="fas fa-star"></i> AI-Powered Prediction System
+            </div>
+            <h1>Predict Student <span class="highlight">Academic Performance</span> with AI</h1>
+            <p>Leverage machine learning to analyze student data and predict academic outcomes. Help educators intervene early and support students for success.</p>
+            <div class="hero-buttons">
+                <a href="#predict" class="btn btn-primary">
+                    <i class="fas fa-chart-line"></i> Start Prediction
+                </a>
+                <a href="#dashboard" class="btn btn-secondary">
+                    <i class="fas fa-tachometer-alt"></i> View Dashboard
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <h3>94%</h3>
+                    <p>Accuracy Rate</p>
+                </div>
+                <div class="stat">
+                    <h3>5000+</h3>
+                    <p>Students Analyzed</p>
+                </div>
+                <div class="stat">
+                    <h3>30+</h3>
+                    <p>Institutions</p>
+                </div>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="floating-card card1">
+                <i class="fas fa-graduation-cap"></i>
+                <span>GPA Prediction</span>
+            </div>
+            <div class="floating-card card2">
+                <i class="fas fa-trophy"></i>
+                <span>Top Performer</span>
+            </div>
+            <div class="floating-card card3">
+                <i class="fas fa-exclamation-triangle"></i>
+                <span>At-Risk Alert</span>
+            </div>
+            <div class="circle-visual">
+                <div class="circle c1"></div>
+                <div class="circle c2"></div>
+                <div class="circle c3"></div>
+                <div class="center-icon">
+                    <i class="fas fa-brain"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="section-title">
+            <h2>Why Choose EduPredict AI?</h2>
+            <p>Advanced features to transform academic performance analysis</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon blue">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <h3>AI-Powered Analysis</h3>
+                <p>Uses advanced machine learning algorithms to predict performance based on multiple academic factors.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon green">
+                    <i class="fas fa-bell"></i>
+                </div>
+                <h3>Early Warning System</h3>
+                <p>Identifies at-risk students early, allowing educators to intervene before academic decline worsens.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon purple">
+                    <i class="fas fa-chart-pie"></i>
+                </div>
+                <h3>Detailed Analytics</h3>
+                <p>Provides comprehensive reports and visual insights into student performance trends and patterns.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon orange">
+                    <i class="fas fa-user-shield"></i>
+                </div>
+                <h3>Privacy First</h3>
+                <p>All student data is processed securely with enterprise-grade encryption and privacy standards.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prediction Form -->
+    <section class="predict-section" id="predict">
+        <div class="section-title">
+            <h2>Student Performance Predictor</h2>
+            <p>Enter student details to generate AI-powered academic prediction</p>
+        </div>
+
+        <div class="predict-container">
+            <div class="form-wrapper">
+                <form id="predictionForm">
+                    <!-- Personal Info -->
+                    <div class="form-section">
+                        <h3><i class="fas fa-user"></i> Personal Information</h3>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label>Student Name</label>
+                                <input type="text" id="studentName" placeholder="Enter full name" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Age</label>
+                                <input type="number" id="age" placeholder="Age" min="10" max="30" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Gender</label>
+                                <select id="gender" required>
+                                    <option value="">Select Gender</option>
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Grade / Class</label>
+                                <select id="grade" required>
+                                    <option value="">Select Grade</option>
+                                    <option value="6">Grade 6</option>
+                                    <option value="7">Grade 7</option>
+                                    <option value="8">Grade 8</option>
+                                    <option value="9">Grade 9</option>
+                                    <option value="10">Grade 10</option>
+                                    <option value="11">Grade 11</option>
+                                    <option value="12">Grade 12</option>
+                                    <option value="college">College</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Academic Info -->
+                    <div class="form-section">
+                        <h3><i class="fas fa-book"></i> Academic Information</h3>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label>Previous GPA (0.0 - 4.0)</label>
+                                <input type="number" id="gpa" placeholder="e.g., 3.5" min="0" max="4" step="0.1" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Attendance Rate (%)</label>
+                                <input type="number" id="attendance" placeholder="e.g., 85" min="0" max="100" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Study Hours per Day</label>
+                                <input type="number" id="studyHours" placeholder="e.g., 3" min="0" max="24" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Assignments Completed (%)</label>
+                                <input type="number" id="assignments" placeholder="e.g., 90" min="0" max="100" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Subject Scores -->
+                    <div class="form-section">
+                        <h3><i class="fas fa-pencil-alt"></i> Subject Scores (0 - 100)</h3>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label>Mathematics</label>
+                                <input type="number" id="math" placeholder="Score" min="0" max="100" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Science</label>
+                                <input type="number" id="science" placeholder="Score" min="0" max="100" required>
+                            </div>
+                            <div class="form-group">
+                                <label>English</label>
+                                <input type="number" id="english" placeholder="Score" min="0" max="100" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Social Studies</label>
+                                <label>Social Studies</label>
+                                <input type="number" id="social" placeholder="Score" min="0" max="100" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Behavioral Factors -->
+                    <div class="form-section">
+                        <h3><i class="fas fa-heart"></i> Behavioral & Social Factors</h3>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label>Parental Education Level</label>
+                                <select id="parentEdu">
+                                    <option value="none">No Formal Education</option>
+                                    <option value="primary">Primary School</option>
+                                    <option value="secondary">Secondary School</option>
+                                    <option value="bachelor">Bachelor's Degree</option>
+                                    <option value="master">Master's / PhD</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Extracurricular Activities</label>
+                                <select id="extra">
+                                    <option value="none">None</option>
+                                    <option value="low">1-2 Activities</option>
+                                    <option value="medium">3-4 Activities</option>
+                                    <option value="high">5+ Activities</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Sleep Hours per Night</label>
+                                <input type="number" id="sleep" placeholder="e.g., 7" min="0" max="12" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Internet Access at Home</label>
+                                <select id="internet">
+                                    <option value="yes">Yes</option>
+                                    <option value="no">No</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-predict">
+                        <i class="fas fa-magic"></i> Generate AI Prediction
+                    </button>
+                </form>
+            </div>
+
+            <!-- Result Panel -->
+            <div class="result-panel" id="resultPanel">
+                <div class="result-placeholder">
+                    <i class="fas fa-chart-bar"></i>
+                    <p>Fill in the form and click "Generate AI Prediction" to see results</p>
+                </div>
+
+                <div class="result-content" id="resultContent" style="display:none">
+                    <div class="result-header">
+                        <h3>Prediction Results</h3>
+                        <span class="result-badge" id="resultBadge"></span>
+                    </div>
+
+                    <div class="student-info-result">
+                        <h4 id="resultName"></h4>
+                        <p id="resultGrade"></p>
+                    </div>
+
+                    <!-- Score Circle -->
+                    <div class="score-circle-wrapper">
+                        <svg class="score-svg" viewBox="0 0 200 200">
+                            <circle cx="100" cy="100" r="85" fill="none" stroke="#e0e0e0" stroke-width="12"/>
+                            <circle cx="100" cy="100" r="85" fill="none" stroke-width="12"
+                                stroke-linecap="round"
+                                stroke-dasharray="534"
+                                stroke-dashoffset="534"
+                                id="scoreCircle"
+                                transform="rotate(-90 100 100)"/>
+                        </svg>
+                        <div class="score-text">
+                            <span id="scoreValue">0%</span>
+                            <small>Success Score</small>
+                        </div>
+                    </div>
+
+                    <!-- Performance Level -->
+                    <div class="performance-level" id="performanceLevel">
+                        <div class="level-icon" id="levelIcon"></div>
+                        <div class="level-info">
+                            <h4 id="levelTitle"></h4>
+                            <p id="levelDesc"></p>
+                        </div>
+                    </div>
+
+                    <!-- Factor Breakdown -->
+                    <div class="factor-breakdown">
+                        <h4>Factor Analysis</h4>
+                        <div class="factor-bars" id="factorBars"></div>
+                    </div>
+
+                    <!-- Recommendations -->
+                    <div class="recommendations" id="recommendations">
+                        <h4><i class="fas fa-lightbulb"></i> AI Recommendations</h4>
+                        <ul id="recList"></ul>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="result-actions">
+                        <button class="btn-action" onclick="printResult()">
+                            <i class="fas fa-print"></i> Print Report
+                        </button>
+                        <button class="btn-action secondary" onclick="resetForm()">
+                            <i class="fas fa-redo"></i> New Prediction
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dashboard -->
+    <section class="dashboard-section" id="dashboard">
+        <div class="section-title">
+            <h2>Analytics Dashboard</h2>
+            <p>Overview of student performance predictions and insights</p>
+        </div>
+
+        <div class="dashboard-grid">
+            <div class="dash-card">
+                <div class="dash-icon green">
+                    <i class="fas fa-smile"></i>
+                </div>
+                <div class="dash-info">
+                    <h3 id="excellentCount">0</h3>
+                    <p>Excellent Students</p>
+                </div>
+            </div>
+            <div class="dash-card">
+                <div class="dash-icon blue">
+                    <i class="fas fa-thumbs-up"></i>
+                </div>
+                <div class="dash-info">
+                    <h3 id="goodCount">0</h3>
+                    <p>Good Performers</p>
+                </div>
+            </div>
+            <div class="dash-card">
+                <div class="dash-icon orange">
+                    <i class="fas fa-meh"></i>
+                </div>
+                <div class="dash-info">
+                    <h3 id="averageCount">0</h3>
+                    <p>Average Students</p>
+                </div>
+            </div>
+            <div class="dash-card">
+                <div class="dash-icon red">
+                    <i class="fas fa-exclamation-circle"></i>
+                </div>
+                <div class="dash-info">
+                    <h3 id="atRiskCount">0</h3>
+                    <p>At-Risk Students</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Chart Area -->
+        <div class="chart-area">
+            <div class="chart-card">
+                <h3>Performance Distribution</h3>
+                <div class="bar-chart" id="barChart">
+                    <div class="no-data">No prediction data yet. Start predicting!</div>
+                </div>
+            </div>
+            <div class="chart-card">
+                <h3>Recent Predictions</h3>
+                <div class="recent-list" id="recentList">
+                    <div class="no-data">No predictions yet.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="about-content">
+            <div class="about-text">
+                <h2>About EduPredict AI</h2>
+                <p>EduPredict AI is an advanced academic performance prediction system that uses machine learning and data analytics to help educators identify student potential and areas needing improvement.</p>
+                <p>Our system analyzes multiple factors including attendance, study habits, past performance, and socio-economic factors to generate accurate predictions and actionable insights.</p>
+                <div class="about-features">
+                    <div class="about-feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Multi-factor analysis for accurate predictions</span>
+                    </div>
+                    <div class="about-feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Real-time recommendations for improvement</span>
+                    </div>
+                    <div class="about-feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Easy-to-understand visual reports</span>
+                    </div>
+                    <div class="about-feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Supports educators and parents alike</span>
+                    </div>
+                </div>
+            </div>
+            <div class="about-visual">
+                <div class="about-stats-grid">
+                    <div class="about-stat">
+                        <i class="fas fa-university"></i>
+                        <h3>30+</h3>
+                        <p>Institutions</p>
+                    </div>
+                    <div class="about-stat">
+                        <i class="fas fa-users"></i>
+                        <h3>5K+</h3>
+                        <p>Students</p>
+                    </div>
+                    <div class="about-stat">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>94%</h3>
+                        <p>Accuracy</p>
+                    </div>
+                    <div class="about-stat">
+                        <i class="fas fa-award"></i>
+                        <h3>#1</h3>
+                        <p>EdTech Tool</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <i class="fas fa-brain"></i>
+                <span>EduPredict AI</span>
+                <p>Empowering education through artificial intelligence.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <a href="#home">Home</a>
+                <a href="#predict">Predict</a>
+                <a href="#dashboard">Dashboard</a>
+                <a href="#about">About</a>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact</h4>
+                <p><i class="fas fa-envelope"></i> support@edupredict.ai</p>
+                <p><i class="fas fa-phone"></i> +1 800 EDU-PRED</p>
+                <p><i class="fas fa-map-marker-alt"></i> Silicon Valley, CA</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 EduPredict AI. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
